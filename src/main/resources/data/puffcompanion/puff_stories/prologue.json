@@ -1,0 +1,37 @@
+{
+  "id": "puff_story_prologue",
+  "title": "puff.story.prologue.title",
+  "start": "intro",
+  "nodes": {
+    "intro": {
+      "lines": [
+        { "speaker": "narrator", "text": "puff.story.prologue.scene" },
+        { "speaker": "puff", "expression": "surprised", "action": "puff.story.prologue.l1.action", "text": "puff.story.prologue.l1" },
+        { "speaker": "puff", "expression": "proud", "action": "puff.story.prologue.l2.action", "text": "puff.story.prologue.l2" },
+        { "speaker": "puff", "expression": "curious", "action": "puff.story.prologue.l3.action", "text": "puff.story.prologue.l3", "anim": "action_alert" }
+      ],
+      "choices": [
+        { "text": "puff.story.prologue.choice1", "next": "trust", "affection": 5 },
+        { "text": "puff.story.prologue.choice2", "next": "tease", "affection": 3, "flags": ["impression_tsukkomi"] }
+      ]
+    },
+    "trust": {
+      "lines": [
+        { "speaker": "puff", "expression": "happy", "action": "puff.story.prologue.trust.action", "text": "puff.story.prologue.trust" }
+      ],
+      "next": "outro"
+    },
+    "tease": {
+      "lines": [
+        { "speaker": "puff", "expression": "shy", "action": "puff.story.prologue.tease.action", "text": "puff.story.prologue.tease", "anim": "action_shy" }
+      ],
+      "next": "outro"
+    },
+    "outro": {
+      "lines": [
+        { "speaker": "puff", "expression": "cheerful", "action": "puff.story.prologue.outro.action", "text": "puff.story.prologue.outro" }
+      ]
+    }
+  },
+  "on_complete": { "affection": 0, "flags": [] }
+}

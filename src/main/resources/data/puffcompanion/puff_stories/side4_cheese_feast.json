@@ -1,0 +1,51 @@
+{
+  "id": "puff_side_cheese_feast",
+  "title": "puff.story.side4_cheese_feast.title",
+  "start": "intro",
+  "nodes": {
+    "intro": {
+      "lines": [
+        {"speaker": "narrator", "text": "puff.story.side4_cheese_feast.l1"},
+        {"speaker": "puff", "text": "puff.story.side4_cheese_feast.l2", "expression": "cheese_drool", "ear": "alert", "action": "puff.story.side4_cheese_feast.a2", "anim": "action_eat_cheese"},
+        {"speaker": "puff", "text": "puff.story.side4_cheese_feast.l3", "expression": "beam", "ear": "curious"}
+      ],
+      "choices": [
+        {"text": "puff.story.side4_cheese_feast.c1", "next": "sweet_pot", "affection": 7, "flags": ["route_hearth_feast", "cheese_recipe_sweet"]},
+        {"text": "puff.story.side4_cheese_feast.c2", "next": "spicy_pot", "affection": 6, "flags": ["route_adventure_feast", "cheese_recipe_spicy"]},
+        {"text": "puff.story.side4_cheese_feast.c3", "next": "feed_puff", "affection": 9, "flags": ["route_true_feast", "route_hearth_feed"]}
+      ]
+    },
+    "sweet_pot": {
+      "lines": [
+        {"speaker": "puff", "text": "puff.story.side4_cheese_feast.r1a", "expression": "bliss_boggle", "ear": "rest", "anim": "action_eat_cheese"},
+        {"speaker": "puff", "text": "puff.story.side4_cheese_feast.r1b", "expression": "closed_smile", "ear": "curious"}
+      ],
+      "next": "outro"
+    },
+    "spicy_pot": {
+      "lines": [
+        {"speaker": "puff", "text": "puff.story.side4_cheese_feast.r2a", "expression": "surprised", "ear": "airplane", "anim": "action_alert_sniff"},
+        {"speaker": "puff", "text": "puff.story.side4_cheese_feast.r2b", "expression": "wink", "ear": "alert"}
+      ],
+      "next": "outro"
+    },
+    "feed_puff": {
+      "lines": [
+        {"speaker": "puff", "text": "puff.story.side4_cheese_feast.r3a", "expression": "overheat_shy", "ear": "folded", "anim": "action_shy"},
+        {"speaker": "puff", "text": "puff.story.side4_cheese_feast.r3b", "expression": "squeeze_shy", "ear": "rest"}
+      ],
+      "next": "outro"
+    },
+    "outro": {
+      "lines": [
+        {"speaker": "puff", "text": "puff.story.side4_cheese_feast.l4", "expression": "beam", "ear": "alert"},
+        {"speaker": "narrator", "text": "puff.story.side4_cheese_feast.l5"}
+      ]
+    }
+  },
+  "on_complete": {
+    "affection": 10,
+    "flags": ["side4_cheese_feast_done"],
+    "giveItems": [{"item": "rats:cheese", "count": 4}]
+  }
+}

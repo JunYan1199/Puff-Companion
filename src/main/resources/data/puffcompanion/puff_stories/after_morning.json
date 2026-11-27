@@ -1,0 +1,40 @@
+{
+  "id": "puff_story_after_morning",
+  "title": "puff.story.after_morning.title",
+  "start": "intro",
+  "nodes": {
+    "intro": {
+      "lines": [
+        {
+          "speaker": "narrator",
+          "text": "puff.story.after_morning.intro.0"
+        },
+        {
+          "speaker": "puff",
+          "text": "puff.story.after_morning.intro.1",
+          "expression": "happy",
+          "action": "puff.story.after_morning.intro.1.action",
+          "anim": "action_shy"
+        },
+        {
+          "speaker": "puff",
+          "text": "puff.story.after_morning.intro.2",
+          "expression": "shy",
+          "action": "puff.story.after_morning.intro.2.action"
+        }
+      ]
+    }
+  },
+  "on_complete": {
+    "giveItems": [
+      {
+        "item": "minecraft:bread",
+        "count": 2
+      },
+      {
+        "item": "rats:cheese",
+        "count": 2
+      }
+    ]
+  }
+}

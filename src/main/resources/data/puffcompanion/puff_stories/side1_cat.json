@@ -1,0 +1,67 @@
+{
+  "id": "puff_side_cat_panic",
+  "title": "puff.story.side1_cat.title",
+  "start": "intro",
+  "nodes": {
+    "intro": {
+      "lines": [
+        {
+          "speaker": "narrator",
+          "text": "puff.story.side1_cat.intro.0"
+        },
+        {
+          "speaker": "puff",
+          "text": "puff.story.side1_cat.intro.1",
+          "expression": "panic",
+          "action": "puff.story.side1_cat.intro.1.action",
+          "anim": "action_alert"
+        },
+        {
+          "speaker": "puff",
+          "text": "puff.story.side1_cat.intro.2",
+          "expression": "panic",
+          "action": "puff.story.side1_cat.intro.2.action"
+        }
+      ],
+      "choices": [
+        {
+          "text": "puff.story.side1_cat.intro.choice1",
+          "next": "protect",
+          "flags": [
+            "route_true_cat"
+          ]
+        },
+        {
+          "text": "puff.story.side1_cat.intro.choice2",
+          "next": "jealous",
+          "flags": [
+            "route_hearth_cat"
+          ]
+        }
+      ]
+    },
+    "protect": {
+      "lines": [
+        {
+          "speaker": "puff",
+          "text": "puff.story.side1_cat.protect.0",
+          "expression": "shy",
+          "action": "puff.story.side1_cat.protect.0.action"
+        }
+      ]
+    },
+    "jealous": {
+      "lines": [
+        {
+          "speaker": "puff",
+          "text": "puff.story.side1_cat.jealous.0",
+          "expression": "pout",
+          "action": "puff.story.side1_cat.jealous.0.action"
+        }
+      ]
+    }
+  },
+  "on_complete": {
+    "affection": 5
+  }
+}

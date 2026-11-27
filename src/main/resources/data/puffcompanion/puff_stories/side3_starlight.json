@@ -1,0 +1,52 @@
+{
+  "id": "puff_side_starlight",
+  "title": "puff.story.side3_starlight.title",
+  "start": "intro",
+  "nodes": {
+    "intro": {
+      "lines": [
+        {"speaker": "narrator", "text": "puff.story.side3_starlight.l1"},
+        {"speaker": "puff", "text": "puff.story.side3_starlight.l2", "expression": "starry", "ear": "curious", "action": "puff.story.side3_starlight.a2", "anim": "action_stretch"},
+        {"speaker": "puff", "text": "puff.story.side3_starlight.l3", "expression": "shy", "ear": "rest"},
+        {"speaker": "puff", "text": "puff.story.side3_starlight.l4", "expression": "wink", "ear": "alert"}
+      ],
+      "choices": [
+        {"text": "puff.story.side3_starlight.c1", "next": "pick_stars", "affection": 6, "flags": ["route_adventure_starlight", "promise_stars"]},
+        {"text": "puff.story.side3_starlight.c2", "next": "pick_home", "affection": 6, "flags": ["route_hearth_starlight", "promise_home"]},
+        {"text": "puff.story.side3_starlight.c3", "next": "pick_together", "affection": 8, "flags": ["route_true_starlight", "promise_together"]}
+      ]
+    },
+    "pick_stars": {
+      "lines": [
+        {"speaker": "puff", "text": "puff.story.side3_starlight.r1a", "expression": "beam", "ear": "alert", "anim": "action_wave"},
+        {"speaker": "puff", "text": "puff.story.side3_starlight.r1b", "expression": "starry", "ear": "curious"}
+      ],
+      "next": "outro"
+    },
+    "pick_home": {
+      "lines": [
+        {"speaker": "puff", "text": "puff.story.side3_starlight.r2a", "expression": "bliss_boggle", "ear": "rest", "anim": "action_shy"},
+        {"speaker": "puff", "text": "puff.story.side3_starlight.r2b", "expression": "closed_smile", "ear": "folded"}
+      ],
+      "next": "outro"
+    },
+    "pick_together": {
+      "lines": [
+        {"speaker": "puff", "text": "puff.story.side3_starlight.r3a", "expression": "overheat_shy", "ear": "folded", "anim": "action_vow_shy"},
+        {"speaker": "puff", "text": "puff.story.side3_starlight.r3b", "expression": "squeeze_shy", "ear": "curious"}
+      ],
+      "next": "outro"
+    },
+    "outro": {
+      "lines": [
+        {"speaker": "puff", "text": "puff.story.side3_starlight.l5", "expression": "smile", "ear": "rest"},
+        {"speaker": "narrator", "text": "puff.story.side3_starlight.l6"}
+      ]
+    }
+  },
+  "on_complete": {
+    "affection": 8,
+    "flags": ["side3_starlight_done"],
+    "giveItems": [{"item": "minecraft:lantern", "count": 1}]
+  }
+}

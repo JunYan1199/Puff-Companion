@@ -1,0 +1,83 @@
+{
+  "id": "puff_story_ch3_endgame",
+  "title": "puff.story.chapter3.title",
+  "start": "intro",
+  "nodes": {
+    "intro": {
+      "lines": [
+        {
+          "speaker": "narrator",
+          "text": "puff.story.chapter3.intro.0"
+        },
+        {
+          "speaker": "puff",
+          "text": "puff.story.chapter3.intro.1",
+          "expression": "gentle",
+          "action": "puff.story.chapter3.intro.1.action"
+        },
+        {
+          "speaker": "puff",
+          "text": "puff.story.chapter3.intro.2",
+          "expression": "determined",
+          "action": "puff.story.chapter3.intro.2.action"
+        }
+      ],
+      "choices": [
+        {
+          "text": "puff.story.chapter3.intro.choice1",
+          "next": "trust",
+          "flags": [
+            "route_adventure_ch3"
+          ]
+        },
+        {
+          "text": "puff.story.chapter3.intro.choice2",
+          "next": "tease",
+          "flags": [
+            "route_true_ch3"
+          ]
+        }
+      ]
+    },
+    "trust": {
+      "lines": [
+        {
+          "speaker": "puff",
+          "text": "puff.story.chapter3.trust.0",
+          "expression": "happy",
+          "action": "puff.story.chapter3.trust.0.action"
+        }
+      ],
+      "next": "outro"
+    },
+    "tease": {
+      "lines": [
+        {
+          "speaker": "puff",
+          "text": "puff.story.chapter3.tease.0",
+          "expression": "pout",
+          "action": "puff.story.chapter3.tease.0.action"
+        }
+      ],
+      "next": "outro"
+    },
+    "outro": {
+      "lines": [
+        {
+          "speaker": "puff",
+          "text": "puff.story.chapter3.outro.0",
+          "expression": "gentle",
+          "action": "puff.story.chapter3.outro.0.action"
+        }
+      ]
+    }
+  },
+  "on_complete": {
+    "affection": 15,
+    "setStage": 3,
+    "unlockOutfits": [
+      "late"
+    ],
+    "equipOutfit": "late"
+  }
+}

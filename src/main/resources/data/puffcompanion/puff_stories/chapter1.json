@@ -1,0 +1,81 @@
+{
+  "id": "puff_story_ch1_hoard",
+  "title": "puff.story.chapter1.title",
+  "start": "intro",
+  "nodes": {
+    "intro": {
+      "lines": [
+        {
+          "speaker": "narrator",
+          "text": "puff.story.chapter1.intro.0"
+        },
+        {
+          "speaker": "puff",
+          "text": "puff.story.chapter1.intro.1",
+          "expression": "focused",
+          "action": "puff.story.chapter1.intro.1.action"
+        },
+        {
+          "speaker": "puff",
+          "text": "puff.story.chapter1.intro.2",
+          "expression": "surprised",
+          "action": "puff.story.chapter1.intro.2.action",
+          "anim": "action_alert"
+        }
+      ],
+      "choices": [
+        {
+          "text": "puff.story.chapter1.intro.choice1",
+          "next": "look",
+          "flags": [
+            "route_adventure_ch1"
+          ]
+        },
+        {
+          "text": "puff.story.chapter1.intro.choice2",
+          "next": "gift",
+          "flags": [
+            "route_hearth_ch1"
+          ]
+        }
+      ]
+    },
+    "look": {
+      "lines": [
+        {
+          "speaker": "puff",
+          "text": "puff.story.chapter1.look.0",
+          "expression": "shy",
+          "action": "puff.story.chapter1.look.0.action",
+          "anim": "action_shy"
+        }
+      ],
+      "next": "outro"
+    },
+    "gift": {
+      "lines": [
+        {
+          "speaker": "puff",
+          "text": "puff.story.chapter1.gift.0",
+          "expression": "shy",
+          "action": "puff.story.chapter1.gift.0.action",
+          "anim": "action_shy"
+        }
+      ],
+      "next": "outro"
+    },
+    "outro": {
+      "lines": [
+        {
+          "speaker": "puff",
+          "text": "puff.story.chapter1.outro.0",
+          "expression": "pout",
+          "action": "puff.story.chapter1.outro.0.action"
+        }
+      ]
+    }
+  },
+  "on_complete": {
+    "affection": 10
+  }
+}

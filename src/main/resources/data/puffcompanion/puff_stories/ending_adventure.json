@@ -1,0 +1,152 @@
+{
+  "id": "puff_story_ending_adventure",
+  "title": "puff.story.ending_adventure.title",
+  "start": "intro",
+  "nodes": {
+    "intro": {
+      "lines": [
+        {
+          "speaker": "narrator",
+          "text": "puff.story.ending_adventure.l1"
+        },
+        {
+          "speaker": "puff",
+          "text": "puff.story.ending_adventure.l2",
+          "expression": "starry",
+          "ear": "alert",
+          "action": "puff.story.ending_adventure.a2",
+          "anim": "action_alert_sniff"
+        },
+        {
+          "speaker": "puff",
+          "text": "puff.story.ending_adventure.l3",
+          "expression": "beam",
+          "ear": "curious",
+          "anim": "action_wave"
+        }
+      ],
+      "choices": [
+        {
+          "text": "puff.story.ending_adventure.c1a",
+          "next": "path_stars",
+          "affection": 6,
+          "flags": [
+            "ending_adv_stars"
+          ]
+        },
+        {
+          "text": "puff.story.ending_adventure.c1b",
+          "next": "path_boss",
+          "affection": 6,
+          "flags": [
+            "ending_adv_boss"
+          ]
+        },
+        {
+          "text": "puff.story.ending_adventure.c1c",
+          "next": "path_cheese",
+          "affection": 5,
+          "flags": [
+            "ending_adv_cheese"
+          ]
+        }
+      ]
+    },
+    "path_stars": {
+      "lines": [
+        {
+          "speaker": "puff",
+          "text": "puff.story.ending_adventure.r1a",
+          "expression": "starry",
+          "ear": "alert",
+          "anim": "action_wave"
+        }
+      ],
+      "next": "vow_choice"
+    },
+    "path_boss": {
+      "lines": [
+        {
+          "speaker": "puff",
+          "text": "puff.story.ending_adventure.r1b",
+          "expression": "beam",
+          "ear": "alert",
+          "anim": "action_shout"
+        }
+      ],
+      "next": "vow_choice"
+    },
+    "path_cheese": {
+      "lines": [
+        {
+          "speaker": "puff",
+          "text": "puff.story.ending_adventure.r1c",
+          "expression": "cheese_drool",
+          "ear": "alert",
+          "anim": "action_eat_cheese"
+        }
+      ],
+      "next": "vow_choice"
+    },
+    "vow_choice": {
+      "lines": [
+        {
+          "speaker": "puff",
+          "text": "puff.story.ending_adventure.l4",
+          "expression": "overheat_shy",
+          "ear": "folded",
+          "action": "puff.story.ending_adventure.a4",
+          "anim": "action_check_cuff"
+        }
+      ],
+      "choices": [
+        {
+          "text": "puff.story.ending_adventure.c2a",
+          "next": "outro",
+          "affection": 8,
+          "flags": [
+            "ending_adventure_partner"
+          ]
+        },
+        {
+          "text": "puff.story.ending_adventure.c2b",
+          "next": "outro",
+          "affection": 8,
+          "flags": [
+            "ending_adventure_shoulder"
+          ]
+        }
+      ]
+    },
+    "outro": {
+      "lines": [
+        {
+          "speaker": "puff",
+          "text": "puff.story.ending_adventure.l5",
+          "expression": "closed_smile",
+          "ear": "curious",
+          "anim": "action_vow_shy"
+        },
+        {
+          "speaker": "narrator",
+          "text": "puff.story.ending_adventure.l6"
+        }
+      ]
+    }
+  },
+  "on_complete": {
+    "affection": 15,
+    "flags": [
+      "ending_adventure"
+    ],
+    "unlockOutfits": [
+      "late"
+    ],
+    "giveItems": [
+      {
+        "item": "minecraft:nether_star",
+        "count": 1
+      }
+    ]
+  }
+}

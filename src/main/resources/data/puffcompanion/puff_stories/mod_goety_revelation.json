@@ -1,0 +1,105 @@
+{
+  "id": "puff_mod_goety_revelation",
+  "title": "puff.story.mod_goety_revelation.title",
+  "start": "intro",
+  "nodes": {
+    "intro": {
+      "lines": [
+        {
+          "speaker": "narrator",
+          "text": "puff.story.mod_goety_revelation.l1"
+        },
+        {
+          "speaker": "puff",
+          "text": "puff.story.mod_goety_revelation.l2",
+          "expression": "panic_fear",
+          "ear": "airplane",
+          "action": "puff.story.mod_goety_revelation.a2",
+          "anim": "action_cat_panic"
+        },
+        {
+          "speaker": "puff",
+          "text": "puff.story.mod_goety_revelation.l3",
+          "expression": "wink",
+          "ear": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "text": "puff.story.mod_goety_revelation.c1",
+          "next": "branch_a",
+          "affection": 5,
+          "flags": [
+            "mod_goety_rev_done_a"
+          ]
+        },
+        {
+          "text": "puff.story.mod_goety_revelation.c2",
+          "next": "branch_b",
+          "affection": 6,
+          "flags": [
+            "mod_goety_rev_done_b"
+          ]
+        },
+        {
+          "text": "puff.story.mod_goety_revelation.c3",
+          "next": "branch_c",
+          "affection": 4,
+          "flags": [
+            "mod_goety_rev_done_c"
+          ]
+        }
+      ]
+    },
+    "branch_a": {
+      "lines": [
+        {
+          "speaker": "puff",
+          "text": "puff.story.mod_goety_revelation.r1",
+          "expression": "teary",
+          "anim": "action_shy"
+        }
+      ],
+      "next": "outro"
+    },
+    "branch_b": {
+      "lines": [
+        {
+          "speaker": "puff",
+          "text": "puff.story.mod_goety_revelation.r2",
+          "expression": "starry",
+          "anim": "action_shout"
+        }
+      ],
+      "next": "outro"
+    },
+    "branch_c": {
+      "lines": [
+        {
+          "speaker": "puff",
+          "text": "puff.story.mod_goety_revelation.r3",
+          "expression": "overheat_shy",
+          "anim": "action_vow_shy"
+        }
+      ],
+      "next": "outro"
+    },
+    "outro": {
+      "lines": [
+        {
+          "speaker": "puff",
+          "text": "puff.story.mod_goety_revelation.l4",
+          "expression": "closed_smile",
+          "ear": "curious",
+          "anim": "action_wave"
+        }
+      ]
+    }
+  },
+  "on_complete": {
+    "affection": 8,
+    "flags": [
+      "mod_goety_rev_done"
+    ]
+  }
+}

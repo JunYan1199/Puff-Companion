@@ -1,0 +1,105 @@
+{
+  "id": "puff_mod_cataclysm_trial",
+  "title": "puff.story.mod_cataclysm_trial.title",
+  "start": "intro",
+  "nodes": {
+    "intro": {
+      "lines": [
+        {
+          "speaker": "narrator",
+          "text": "puff.story.mod_cataclysm_trial.l1"
+        },
+        {
+          "speaker": "puff",
+          "text": "puff.story.mod_cataclysm_trial.l2",
+          "expression": "teary",
+          "ear": "folded",
+          "action": "puff.story.mod_cataclysm_trial.a2",
+          "anim": "action_ground_rest"
+        },
+        {
+          "speaker": "puff",
+          "text": "puff.story.mod_cataclysm_trial.l3",
+          "expression": "wink",
+          "ear": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "text": "puff.story.mod_cataclysm_trial.c1",
+          "next": "branch_a",
+          "affection": 5,
+          "flags": [
+            "mod_cataclysm_done_a"
+          ]
+        },
+        {
+          "text": "puff.story.mod_cataclysm_trial.c2",
+          "next": "branch_b",
+          "affection": 6,
+          "flags": [
+            "mod_cataclysm_done_b"
+          ]
+        },
+        {
+          "text": "puff.story.mod_cataclysm_trial.c3",
+          "next": "branch_c",
+          "affection": 4,
+          "flags": [
+            "mod_cataclysm_done_c"
+          ]
+        }
+      ]
+    },
+    "branch_a": {
+      "lines": [
+        {
+          "speaker": "puff",
+          "text": "puff.story.mod_cataclysm_trial.r1",
+          "expression": "bliss_boggle",
+          "anim": "action_shy"
+        }
+      ],
+      "next": "outro"
+    },
+    "branch_b": {
+      "lines": [
+        {
+          "speaker": "puff",
+          "text": "puff.story.mod_cataclysm_trial.r2",
+          "expression": "beam",
+          "anim": "action_shout"
+        }
+      ],
+      "next": "outro"
+    },
+    "branch_c": {
+      "lines": [
+        {
+          "speaker": "puff",
+          "text": "puff.story.mod_cataclysm_trial.r3",
+          "expression": "cheese_drool",
+          "anim": "action_hoard_pickup"
+        }
+      ],
+      "next": "outro"
+    },
+    "outro": {
+      "lines": [
+        {
+          "speaker": "puff",
+          "text": "puff.story.mod_cataclysm_trial.l4",
+          "expression": "closed_smile",
+          "ear": "curious",
+          "anim": "action_wave"
+        }
+      ]
+    }
+  },
+  "on_complete": {
+    "affection": 8,
+    "flags": [
+      "mod_cataclysm_done"
+    ]
+  }
+}

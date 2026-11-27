@@ -1,0 +1,85 @@
+{
+  "id": "puff_story_finale_marriage",
+  "title": "puff.story.finale_marriage.title",
+  "start": "intro",
+  "nodes": {
+    "intro": {
+      "lines": [
+        {
+          "speaker": "narrator",
+          "text": "puff.story.finale_marriage.intro.0"
+        },
+        {
+          "speaker": "puff",
+          "text": "puff.story.finale_marriage.intro.1",
+          "expression": "flustered",
+          "action": "puff.story.finale_marriage.intro.1.action",
+          "anim": "action_shy"
+        },
+        {
+          "speaker": "puff",
+          "text": "puff.story.finale_marriage.intro.2",
+          "expression": "gentle",
+          "action": "puff.story.finale_marriage.intro.2.action"
+        },
+        {
+          "speaker": "puff",
+          "text": "puff.story.finale_marriage.intro.3",
+          "expression": "teary",
+          "action": "puff.story.finale_marriage.intro.3.action"
+        }
+      ],
+      "choices": [
+        {
+          "text": "puff.story.finale_marriage.intro.choice1",
+          "next": "share"
+        },
+        {
+          "text": "puff.story.finale_marriage.intro.choice2",
+          "next": "promise"
+        }
+      ]
+    },
+    "share": {
+      "lines": [
+        {
+          "speaker": "puff",
+          "text": "puff.story.finale_marriage.share.0",
+          "expression": "teary",
+          "action": "puff.story.finale_marriage.share.0.action",
+          "anim": "action_shy"
+        }
+      ],
+      "next": "outro"
+    },
+    "promise": {
+      "lines": [
+        {
+          "speaker": "puff",
+          "text": "puff.story.finale_marriage.promise.0",
+          "expression": "happy",
+          "action": "puff.story.finale_marriage.promise.0.action"
+        }
+      ],
+      "next": "outro"
+    },
+    "outro": {
+      "lines": [
+        {
+          "speaker": "puff",
+          "text": "puff.story.finale_marriage.outro.0",
+          "expression": "shy",
+          "action": "puff.story.finale_marriage.outro.0.action",
+          "anim": "action_shy"
+        }
+      ]
+    }
+  },
+  "on_complete": {
+    "setStage": 4,
+    "unlockOutfits": [
+      "wedding"
+    ],
+    "equipOutfit": "wedding"
+  }
+}

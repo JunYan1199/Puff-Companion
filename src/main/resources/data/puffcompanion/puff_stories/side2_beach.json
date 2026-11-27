@@ -1,0 +1,72 @@
+{
+  "id": "puff_side_beach",
+  "title": "puff.story.side2_beach.title",
+  "start": "intro",
+  "nodes": {
+    "intro": {
+      "lines": [
+        {
+          "speaker": "narrator",
+          "text": "puff.story.side2_beach.intro.0"
+        },
+        {
+          "speaker": "puff",
+          "text": "puff.story.side2_beach.intro.1",
+          "expression": "shy",
+          "action": "puff.story.side2_beach.intro.1.action",
+          "anim": "action_shy"
+        },
+        {
+          "speaker": "puff",
+          "text": "puff.story.side2_beach.intro.2",
+          "expression": "cheerful",
+          "action": "puff.story.side2_beach.intro.2.action"
+        }
+      ],
+      "choices": [
+        {
+          "text": "puff.story.side2_beach.intro.choice1",
+          "next": "cute",
+          "flags": [
+            "route_hearth_beach"
+          ]
+        },
+        {
+          "text": "puff.story.side2_beach.intro.choice2",
+          "next": "race",
+          "flags": [
+            "route_adventure_beach"
+          ]
+        }
+      ]
+    },
+    "cute": {
+      "lines": [
+        {
+          "speaker": "puff",
+          "text": "puff.story.side2_beach.cute.0",
+          "expression": "flustered",
+          "action": "puff.story.side2_beach.cute.0.action",
+          "anim": "action_shy"
+        }
+      ]
+    },
+    "race": {
+      "lines": [
+        {
+          "speaker": "puff",
+          "text": "puff.story.side2_beach.race.0",
+          "expression": "proud",
+          "action": "puff.story.side2_beach.race.0.action"
+        }
+      ]
+    }
+  },
+  "on_complete": {
+    "affection": 10,
+    "unlockOutfits": [
+      "swim"
+    ],
+    "equipOutfit": "swim"
+  }
+}

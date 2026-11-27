@@ -1,0 +1,45 @@
+{
+  "id": "puff_story_ending_true_vow",
+  "title": "puff.story.ending_true_vow.title",
+  "start": "intro",
+  "nodes": {
+    "intro": {
+      "lines": [
+        {"speaker": "narrator", "text": "puff.story.ending_true_vow.l1"},
+        {"speaker": "puff", "text": "puff.story.ending_true_vow.l2", "expression": "starry", "ear": "curious", "action": "puff.story.ending_true_vow.a2", "anim": "action_check_cuff"},
+        {"speaker": "puff", "text": "puff.story.ending_true_vow.l3", "expression": "shy", "ear": "rest"},
+        {"speaker": "puff", "text": "puff.story.ending_true_vow.l4", "expression": "closed_smile", "ear": "curious"}
+      ],
+      "choices": [
+        {"text": "puff.story.ending_true_vow.c1", "next": "vow_forever", "affection": 15, "flags": ["ending_true_forever"]},
+        {"text": "puff.story.ending_true_vow.c2", "next": "vow_next_page", "affection": 15, "flags": ["ending_true_next_page"]}
+      ]
+    },
+    "vow_forever": {
+      "lines": [
+        {"speaker": "puff", "text": "puff.story.ending_true_vow.r1a", "expression": "teary", "ear": "folded", "anim": "action_vow_shy"},
+        {"speaker": "puff", "text": "puff.story.ending_true_vow.r1b", "expression": "beam", "ear": "alert"}
+      ],
+      "next": "outro"
+    },
+    "vow_next_page": {
+      "lines": [
+        {"speaker": "puff", "text": "puff.story.ending_true_vow.r2a", "expression": "overheat_shy", "ear": "alert", "anim": "action_wave"},
+        {"speaker": "puff", "text": "puff.story.ending_true_vow.r2b", "expression": "starry", "ear": "curious"}
+      ],
+      "next": "outro"
+    },
+    "outro": {
+      "lines": [
+        {"speaker": "puff", "text": "puff.story.ending_true_vow.l5", "expression": "bliss_boggle", "ear": "rest", "anim": "action_vow_shy"},
+        {"speaker": "narrator", "text": "puff.story.ending_true_vow.l6"}
+      ]
+    }
+  },
+  "on_complete": {
+    "affection": 20,
+    "flags": ["ending_true_vow"],
+    "unlockOutfits": ["wedding", "late"],
+    "giveItems": [{"item": "minecraft:nether_star", "count": 1}]
+  }
+}

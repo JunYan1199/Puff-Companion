@@ -1,0 +1,105 @@
+{
+  "id": "puff_mod_irons_arcane",
+  "title": "puff.story.mod_irons_arcane.title",
+  "start": "intro",
+  "nodes": {
+    "intro": {
+      "lines": [
+        {
+          "speaker": "narrator",
+          "text": "puff.story.mod_irons_arcane.l1"
+        },
+        {
+          "speaker": "puff",
+          "text": "puff.story.mod_irons_arcane.l2",
+          "expression": "starry",
+          "ear": "alert",
+          "action": "puff.story.mod_irons_arcane.a2",
+          "anim": "action_spellcast"
+        },
+        {
+          "speaker": "puff",
+          "text": "puff.story.mod_irons_arcane.l3",
+          "expression": "wink",
+          "ear": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "text": "puff.story.mod_irons_arcane.c1",
+          "next": "branch_a",
+          "affection": 5,
+          "flags": [
+            "mod_irons_done_a"
+          ]
+        },
+        {
+          "text": "puff.story.mod_irons_arcane.c2",
+          "next": "branch_b",
+          "affection": 6,
+          "flags": [
+            "mod_irons_done_b"
+          ]
+        },
+        {
+          "text": "puff.story.mod_irons_arcane.c3",
+          "next": "branch_c",
+          "affection": 4,
+          "flags": [
+            "mod_irons_done_c"
+          ]
+        }
+      ]
+    },
+    "branch_a": {
+      "lines": [
+        {
+          "speaker": "puff",
+          "text": "puff.story.mod_irons_arcane.r1",
+          "expression": "beam",
+          "anim": "action_spellcast"
+        }
+      ],
+      "next": "outro"
+    },
+    "branch_b": {
+      "lines": [
+        {
+          "speaker": "puff",
+          "text": "puff.story.mod_irons_arcane.r2",
+          "expression": "cheese_drool",
+          "anim": "action_eat_cheese"
+        }
+      ],
+      "next": "outro"
+    },
+    "branch_c": {
+      "lines": [
+        {
+          "speaker": "puff",
+          "text": "puff.story.mod_irons_arcane.r3",
+          "expression": "overheat_shy",
+          "anim": "action_shy"
+        }
+      ],
+      "next": "outro"
+    },
+    "outro": {
+      "lines": [
+        {
+          "speaker": "puff",
+          "text": "puff.story.mod_irons_arcane.l4",
+          "expression": "closed_smile",
+          "ear": "curious",
+          "anim": "action_wave"
+        }
+      ]
+    }
+  },
+  "on_complete": {
+    "affection": 8,
+    "flags": [
+      "mod_irons_done"
+    ]
+  }
+}

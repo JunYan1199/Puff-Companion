@@ -1,0 +1,105 @@
+{
+  "id": "puff_mod_alexscaves_expedition",
+  "title": "puff.story.mod_alexscaves_expedition.title",
+  "start": "intro",
+  "nodes": {
+    "intro": {
+      "lines": [
+        {
+          "speaker": "narrator",
+          "text": "puff.story.mod_alexscaves_expedition.l1"
+        },
+        {
+          "speaker": "puff",
+          "text": "puff.story.mod_alexscaves_expedition.l2",
+          "expression": "beam",
+          "ear": "alert",
+          "action": "puff.story.mod_alexscaves_expedition.a2",
+          "anim": "action_alert_sniff"
+        },
+        {
+          "speaker": "puff",
+          "text": "puff.story.mod_alexscaves_expedition.l3",
+          "expression": "wink",
+          "ear": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "text": "puff.story.mod_alexscaves_expedition.c1",
+          "next": "branch_a",
+          "affection": 5,
+          "flags": [
+            "mod_ac_done_a"
+          ]
+        },
+        {
+          "text": "puff.story.mod_alexscaves_expedition.c2",
+          "next": "branch_b",
+          "affection": 6,
+          "flags": [
+            "mod_ac_done_b"
+          ]
+        },
+        {
+          "text": "puff.story.mod_alexscaves_expedition.c3",
+          "next": "branch_c",
+          "affection": 4,
+          "flags": [
+            "mod_ac_done_c"
+          ]
+        }
+      ]
+    },
+    "branch_a": {
+      "lines": [
+        {
+          "speaker": "puff",
+          "text": "puff.story.mod_alexscaves_expedition.r1",
+          "expression": "cheese_drool",
+          "anim": "action_eat_cheese"
+        }
+      ],
+      "next": "outro"
+    },
+    "branch_b": {
+      "lines": [
+        {
+          "speaker": "puff",
+          "text": "puff.story.mod_alexscaves_expedition.r2",
+          "expression": "surprised",
+          "anim": "action_cat_panic"
+        }
+      ],
+      "next": "outro"
+    },
+    "branch_c": {
+      "lines": [
+        {
+          "speaker": "puff",
+          "text": "puff.story.mod_alexscaves_expedition.r3",
+          "expression": "bliss_boggle",
+          "anim": "action_hoard_pickup"
+        }
+      ],
+      "next": "outro"
+    },
+    "outro": {
+      "lines": [
+        {
+          "speaker": "puff",
+          "text": "puff.story.mod_alexscaves_expedition.l4",
+          "expression": "closed_smile",
+          "ear": "curious",
+          "anim": "action_wave"
+        }
+      ]
+    }
+  },
+  "on_complete": {
+    "affection": 8,
+    "flags": [
+      "mod_ac_done"
+    ]
+  }
+}

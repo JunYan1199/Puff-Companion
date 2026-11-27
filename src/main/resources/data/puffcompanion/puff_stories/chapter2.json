@@ -1,0 +1,101 @@
+{
+  "id": "puff_story_ch2_workshop",
+  "title": "puff.story.chapter2.title",
+  "start": "intro",
+  "nodes": {
+    "intro": {
+      "lines": [
+        {
+          "speaker": "narrator",
+          "text": "puff.story.chapter2.intro.0"
+        },
+        {
+          "speaker": "puff",
+          "text": "puff.story.chapter2.intro.1",
+          "expression": "proud",
+          "action": "puff.story.chapter2.intro.1.action"
+        },
+        {
+          "speaker": "rats",
+          "text": "puff.story.chapter2.intro.2",
+          "action": "puff.story.chapter2.intro.2.action"
+        },
+        {
+          "speaker": "puff",
+          "text": "puff.story.chapter2.intro.3",
+          "expression": "proud",
+          "action": "puff.story.chapter2.intro.3.action"
+        },
+        {
+          "speaker": "puff",
+          "text": "puff.story.chapter2.intro.4",
+          "expression": "sly",
+          "action": "puff.story.chapter2.intro.4.action"
+        }
+      ],
+      "choices": [
+        {
+          "text": "puff.story.chapter2.intro.choice1",
+          "next": "pat",
+          "flags": [
+            "route_hearth_ch2"
+          ]
+        },
+        {
+          "text": "puff.story.chapter2.intro.choice2",
+          "next": "cheese",
+          "flags": [
+            "route_adventure_ch2"
+          ]
+        }
+      ]
+    },
+    "pat": {
+      "lines": [
+        {
+          "speaker": "puff",
+          "text": "puff.story.chapter2.pat.0",
+          "expression": "shy",
+          "action": "puff.story.chapter2.pat.0.action",
+          "anim": "action_shy"
+        },
+        {
+          "speaker": "puff",
+          "text": "puff.story.chapter2.pat.1",
+          "expression": "shy",
+          "action": "puff.story.chapter2.pat.1.action"
+        }
+      ],
+      "next": "outro"
+    },
+    "cheese": {
+      "lines": [
+        {
+          "speaker": "puff",
+          "text": "puff.story.chapter2.cheese.0",
+          "expression": "starry",
+          "action": "puff.story.chapter2.cheese.0.action"
+        }
+      ],
+      "next": "outro"
+    },
+    "outro": {
+      "lines": [
+        {
+          "speaker": "puff",
+          "text": "puff.story.chapter2.outro.0",
+          "expression": "flustered",
+          "action": "puff.story.chapter2.outro.0.action"
+        }
+      ]
+    }
+  },
+  "on_complete": {
+    "affection": 15,
+    "setStage": 2,
+    "unlockOutfits": [
+      "mid"
+    ],
+    "equipOutfit": "mid"
+  }
+}

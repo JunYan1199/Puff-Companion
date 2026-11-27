@@ -1,0 +1,105 @@
+{
+  "id": "puff_mod_goety_dark_arts",
+  "title": "puff.story.mod_goety_dark_arts.title",
+  "start": "intro",
+  "nodes": {
+    "intro": {
+      "lines": [
+        {
+          "speaker": "narrator",
+          "text": "puff.story.mod_goety_dark_arts.l1"
+        },
+        {
+          "speaker": "puff",
+          "text": "puff.story.mod_goety_dark_arts.l2",
+          "expression": "surprised",
+          "ear": "alert",
+          "action": "puff.story.mod_goety_dark_arts.a2",
+          "anim": "action_alert_sniff"
+        },
+        {
+          "speaker": "puff",
+          "text": "puff.story.mod_goety_dark_arts.l3",
+          "expression": "wink",
+          "ear": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "text": "puff.story.mod_goety_dark_arts.c1",
+          "next": "branch_a",
+          "affection": 5,
+          "flags": [
+            "mod_goety_done_a"
+          ]
+        },
+        {
+          "text": "puff.story.mod_goety_dark_arts.c2",
+          "next": "branch_b",
+          "affection": 6,
+          "flags": [
+            "mod_goety_done_b"
+          ]
+        },
+        {
+          "text": "puff.story.mod_goety_dark_arts.c3",
+          "next": "branch_c",
+          "affection": 4,
+          "flags": [
+            "mod_goety_done_c"
+          ]
+        }
+      ]
+    },
+    "branch_a": {
+      "lines": [
+        {
+          "speaker": "puff",
+          "text": "puff.story.mod_goety_dark_arts.r1",
+          "expression": "overheat_shy",
+          "anim": "action_shy"
+        }
+      ],
+      "next": "outro"
+    },
+    "branch_b": {
+      "lines": [
+        {
+          "speaker": "puff",
+          "text": "puff.story.mod_goety_dark_arts.r2",
+          "expression": "beam",
+          "anim": "action_spellcast"
+        }
+      ],
+      "next": "outro"
+    },
+    "branch_c": {
+      "lines": [
+        {
+          "speaker": "puff",
+          "text": "puff.story.mod_goety_dark_arts.r3",
+          "expression": "cheese_drool",
+          "anim": "action_eat_cheese"
+        }
+      ],
+      "next": "outro"
+    },
+    "outro": {
+      "lines": [
+        {
+          "speaker": "puff",
+          "text": "puff.story.mod_goety_dark_arts.l4",
+          "expression": "closed_smile",
+          "ear": "curious",
+          "anim": "action_wave"
+        }
+      ]
+    }
+  },
+  "on_complete": {
+    "affection": 8,
+    "flags": [
+      "mod_goety_done"
+    ]
+  }
+}

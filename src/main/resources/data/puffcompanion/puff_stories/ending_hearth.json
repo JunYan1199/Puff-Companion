@@ -1,0 +1,149 @@
+{
+  "id": "puff_story_ending_hearth",
+  "title": "puff.story.ending_hearth.title",
+  "start": "intro",
+  "nodes": {
+    "intro": {
+      "lines": [
+        {
+          "speaker": "narrator",
+          "text": "puff.story.ending_hearth.l1"
+        },
+        {
+          "speaker": "puff",
+          "text": "puff.story.ending_hearth.l2",
+          "expression": "closed_smile",
+          "ear": "folded",
+          "action": "puff.story.ending_hearth.a2",
+          "anim": "action_ground_rest"
+        },
+        {
+          "speaker": "puff",
+          "text": "puff.story.ending_hearth.l3",
+          "expression": "shy",
+          "ear": "curious",
+          "anim": "action_shy"
+        }
+      ],
+      "choices": [
+        {
+          "text": "puff.story.ending_hearth.c1a",
+          "next": "hearth_cook",
+          "affection": 6,
+          "flags": [
+            "ending_hearth_cook"
+          ]
+        },
+        {
+          "text": "puff.story.ending_hearth.c1b",
+          "next": "hearth_nap",
+          "affection": 6,
+          "flags": [
+            "ending_hearth_nap"
+          ]
+        },
+        {
+          "text": "puff.story.ending_hearth.c1c",
+          "next": "hearth_rats",
+          "affection": 5,
+          "flags": [
+            "ending_hearth_rats"
+          ]
+        }
+      ]
+    },
+    "hearth_cook": {
+      "lines": [
+        {
+          "speaker": "puff",
+          "text": "puff.story.ending_hearth.r1a",
+          "expression": "cheese_drool",
+          "ear": "alert",
+          "anim": "action_eat_cheese"
+        }
+      ],
+      "next": "evening"
+    },
+    "hearth_nap": {
+      "lines": [
+        {
+          "speaker": "puff",
+          "text": "puff.story.ending_hearth.r1b",
+          "expression": "bliss_boggle",
+          "ear": "folded",
+          "anim": "action_ground_rest"
+        }
+      ],
+      "next": "evening"
+    },
+    "hearth_rats": {
+      "lines": [
+        {
+          "speaker": "puff",
+          "text": "puff.story.ending_hearth.r1c",
+          "expression": "beam",
+          "ear": "alert",
+          "anim": "action_command_rats"
+        }
+      ],
+      "next": "evening"
+    },
+    "evening": {
+      "lines": [
+        {
+          "speaker": "puff",
+          "text": "puff.story.ending_hearth.l4",
+          "expression": "overheat_shy",
+          "ear": "folded",
+          "action": "puff.story.ending_hearth.a4",
+          "anim": "action_vow_shy"
+        }
+      ],
+      "choices": [
+        {
+          "text": "puff.story.ending_hearth.c2a",
+          "next": "outro",
+          "affection": 8,
+          "flags": [
+            "ending_hearth_stay"
+          ]
+        },
+        {
+          "text": "puff.story.ending_hearth.c2b",
+          "next": "outro",
+          "affection": 8,
+          "flags": [
+            "ending_hearth_pet"
+          ]
+        }
+      ]
+    },
+    "outro": {
+      "lines": [
+        {
+          "speaker": "puff",
+          "text": "puff.story.ending_hearth.l5",
+          "expression": "bliss_boggle",
+          "ear": "folded",
+          "anim": "action_shy"
+        },
+        {
+          "speaker": "narrator",
+          "text": "puff.story.ending_hearth.l6"
+        }
+      ]
+    }
+  },
+  "on_complete": {
+    "affection": 15,
+    "flags": [
+      "ending_hearth"
+    ],
+    "giveItems": [
+      {
+        "item": "rats:cheese",
+        "count": 8
+      }
+    ]
+  }
+}

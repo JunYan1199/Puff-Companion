@@ -1,0 +1,43 @@
+{
+  "id": "puff_side_rat_parade",
+  "title": "puff.story.side5_rat_parade.title",
+  "start": "intro",
+  "nodes": {
+    "intro": {
+      "lines": [
+        {"speaker": "narrator", "text": "puff.story.side5_rat_parade.l1"},
+        {"speaker": "puff", "text": "puff.story.side5_rat_parade.l2", "expression": "beam", "ear": "alert", "action": "puff.story.side5_rat_parade.a2", "anim": "action_command_rats"},
+        {"speaker": "puff", "text": "puff.story.side5_rat_parade.l3", "expression": "starry", "ear": "curious"}
+      ],
+      "choices": [
+        {"text": "puff.story.side5_rat_parade.c1", "next": "knight_vow", "affection": 8, "flags": ["route_adventure_parade", "rat_kingdom_knight"]},
+        {"text": "puff.story.side5_rat_parade.c2", "next": "co_ruler", "affection": 9, "flags": ["route_true_parade", "rat_kingdom_coruler"]}
+      ]
+    },
+    "knight_vow": {
+      "lines": [
+        {"speaker": "puff", "text": "puff.story.side5_rat_parade.r1a", "expression": "starry", "ear": "alert", "anim": "action_wave"},
+        {"speaker": "puff", "text": "puff.story.side5_rat_parade.r1b", "expression": "wink", "ear": "curious"}
+      ],
+      "next": "outro"
+    },
+    "co_ruler": {
+      "lines": [
+        {"speaker": "puff", "text": "puff.story.side5_rat_parade.r2a", "expression": "overheat_shy", "ear": "folded", "anim": "action_vow_shy"},
+        {"speaker": "puff", "text": "puff.story.side5_rat_parade.r2b", "expression": "closed_smile", "ear": "rest"}
+      ],
+      "next": "outro"
+    },
+    "outro": {
+      "lines": [
+        {"speaker": "puff", "text": "puff.story.side5_rat_parade.l4", "expression": "beam", "ear": "alert"},
+        {"speaker": "narrator", "text": "puff.story.side5_rat_parade.l5"}
+      ]
+    }
+  },
+  "on_complete": {
+    "affection": 10,
+    "flags": ["side5_rat_parade_done"],
+    "giveItems": [{"item": "rats:cheese", "count": 6}]
+  }
+}

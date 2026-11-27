@@ -1,0 +1,43 @@
+{
+  "id": "puff_story_ending_queen",
+  "title": "puff.story.ending_queen.title",
+  "start": "intro",
+  "nodes": {
+    "intro": {
+      "lines": [
+        {"speaker": "narrator", "text": "puff.story.ending_queen.l1"},
+        {"speaker": "puff", "text": "puff.story.ending_queen.l2", "expression": "starry", "ear": "alert", "action": "puff.story.ending_queen.a2", "anim": "action_command_rats"},
+        {"speaker": "puff", "text": "puff.story.ending_queen.l3", "expression": "beam", "ear": "curious"}
+      ],
+      "choices": [
+        {"text": "puff.story.ending_queen.c1", "next": "crown_puff", "affection": 10, "flags": ["ending_queen_crowned"]},
+        {"text": "puff.story.ending_queen.c2", "next": "share_crown", "affection": 10, "flags": ["ending_queen_shared"]}
+      ]
+    },
+    "crown_puff": {
+      "lines": [
+        {"speaker": "puff", "text": "puff.story.ending_queen.r1a", "expression": "overheat_shy", "ear": "folded", "anim": "action_shy"},
+        {"speaker": "puff", "text": "puff.story.ending_queen.r1b", "expression": "beam", "ear": "alert"}
+      ],
+      "next": "outro"
+    },
+    "share_crown": {
+      "lines": [
+        {"speaker": "puff", "text": "puff.story.ending_queen.r2a", "expression": "squeeze_shy", "ear": "folded", "anim": "action_vow_shy"},
+        {"speaker": "puff", "text": "puff.story.ending_queen.r2b", "expression": "closed_smile", "ear": "rest"}
+      ],
+      "next": "outro"
+    },
+    "outro": {
+      "lines": [
+        {"speaker": "puff", "text": "puff.story.ending_queen.l4", "expression": "starry", "ear": "alert", "anim": "action_wave"},
+        {"speaker": "narrator", "text": "puff.story.ending_queen.l5"}
+      ]
+    }
+  },
+  "on_complete": {
+    "affection": 15,
+    "flags": ["ending_queen"],
+    "giveItems": [{"item": "minecraft:golden_apple", "count": 2}]
+  }
+}
